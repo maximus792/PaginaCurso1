@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+    </head>
+    <body>
+        <h1>Shift Table</h1>
+        <table border="1">
+            <tr><th>Morning Shift</th><th>Afternoon Shift</th><th>Night Shift</th></tr>
+            <tr> <td id="mati">0</td> <td id="tarda">0</td> <td id="nit">0</td> </tr>
+        </table>
+        <p id="p">The shift with a higher average age is </p>
+
+        <script>
+            var mati=0,tarda=0,nit=0,a=0;
+            for (var i = 0; i<5; i++){
+                a = parseInt(prompt("Introduce la edad del estudiant del mati: "));
+                mati+=a;
+            }
+            mati = mati/5;
+            a=0;
+
+            for (var i = 0; i<6; i++){
+                a = parseInt(prompt("Introduce la edad del estudiant de la tarda: "));
+                tarda+=a;
+            }
+            tarda = tarda/6;
+            a=0;
+
+            for (var i = 0; i<11; i++){
+                a = parseInt(prompt("Introduce la edad del estudiant de la nit: "));
+                nit+=a;
+            }
+            nit = nit/11;
+            document.getElementById("mati").innerHTML = mati;
+            document.getElementById("tarda").innerHTML = tarda;
+            document.getElementById("nit").innerHTML = nit;
+            document.getElementById("p").innerHTML = "The shift with a higher average age is " + Math.max(mati,tarda,nit);
+        </script>
+    </body>
+</html>
