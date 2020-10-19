@@ -435,6 +435,9 @@ textarea{
     text-decoration: none;
     color: white;
 }
+.derechos:hover, .copyright:hover{
+    cursor: default
+}
 
 
 
